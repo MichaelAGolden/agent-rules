@@ -1,0 +1,19 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(swift:*)",
+      "Bash(swiftc:*)",
+      "Bash(swift build)",
+      "Bash(swift test)",
+      "Bash(swift package:*)",
+      "Bash(xcodebuild:*)",
+      "Bash(xcrun:*)",
+      "Bash(pod install)",
+      "Bash(pod update)",
+      "WebFetch(domain:developer.apple.com)",
+      "WebFetch(domain:swift.org)",
+      "WebFetch(domain:github.com)"
+    ],
+    "deny": []
+  }
+}

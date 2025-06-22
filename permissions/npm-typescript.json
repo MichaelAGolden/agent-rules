@@ -1,0 +1,22 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(npm install)",
+      "Bash(npm install:*)",
+      "Bash(npm run:*)",
+      "Bash(npm test)",
+      "Bash(npm run build)",
+      "Bash(npm run dev)",
+      "Bash(npm run lint)",
+      "Bash(npm run typecheck)",
+      "Bash(npx:*)",
+      "Bash(tsc:*)",
+      "Bash(tsx:*)",
+      "Bash(node:*)",
+      "WebFetch(domain:npmjs.com)",
+      "WebFetch(domain:unpkg.com)",
+      "WebFetch(domain:jsdelivr.net)"
+    ],
+    "deny": []
+  }
+}
