@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(mysql:*)",
+      "Bash(psql:*)",
+      "Bash(sqlite3:*)",
+      "Bash(redis-cli:*)",
+      "Bash(mongo:*)",
+      "Bash(mongosh:*)",
+      "Bash(pg_dump:*)",
+      "Bash(mysqldump:*)",
+      "Bash(redis-server)",
+      "Bash(mongod)",
+      "WebFetch(domain:postgresql.org)",
+      "WebFetch(domain:mysql.com)",
+      "WebFetch(domain:mongodb.com)",
+      "WebFetch(domain:redis.io)"
+    ],
+    "deny": [
+      "Bash(DROP DATABASE:*)",
+      "Bash(DROP TABLE:*)"
+    ]
+  }
+}

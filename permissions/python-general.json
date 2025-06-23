@@ -1,0 +1,30 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(python:*)",
+      "Bash(python3:*)",
+      "Bash(pip install:*)",
+      "Bash(pip3 install:*)",
+      "Bash(pip list)",
+      "Bash(pip freeze)",
+      "Bash(pytest:*)",
+      "Bash(python -m pytest:*)",
+      "Bash(python3 -m pytest:*)",
+      "Bash(ruff:*)",
+      "Bash(black:*)",
+      "Bash(mypy:*)",
+      "Bash(flake8:*)",
+      "Bash(poetry:*)",
+      "Bash(pipenv:*)",
+      "Bash(venv:*)",
+      "Bash(virtualenv:*)",
+      "Bash(python -m venv:*)",
+      "Bash(python3 -m venv:*)",
+      "Bash(jupyter:*)",
+      "WebFetch(domain:pypi.org)",
+      "WebFetch(domain:python.org)",
+      "WebFetch(domain:docs.python.org)"
+    ],
+    "deny": []
+  }
+}

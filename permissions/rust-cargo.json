@@ -1,0 +1,24 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(cargo:*)",
+      "Bash(rustc:*)",
+      "Bash(rustup:*)",
+      "Bash(cargo build)",
+      "Bash(cargo run:*)",
+      "Bash(cargo test:*)",
+      "Bash(cargo check)",
+      "Bash(cargo clippy:*)",
+      "Bash(cargo fmt:*)",
+      "Bash(cargo doc:*)",
+      "Bash(cargo bench:*)",
+      "Bash(cargo install:*)",
+      "Bash(cargo update)",
+      "Bash(cargo clean)",
+      "WebFetch(domain:crates.io)",
+      "WebFetch(domain:rust-lang.org)",
+      "WebFetch(domain:docs.rs)"
+    ],
+    "deny": []
+  }
+}

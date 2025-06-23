@@ -1,0 +1,21 @@
+{
+  "permissions": {
+    "allow": [
+      "Bash(docker:*)",
+      "Bash(docker-compose:*)",
+      "Bash(kubectl:*)",
+      "Bash(helm:*)",
+      "Bash(minikube:*)",
+      "Bash(kind:*)",
+      "Bash(k3s:*)",
+      "Bash(podman:*)",
+      "WebFetch(domain:hub.docker.com)",
+      "WebFetch(domain:kubernetes.io)",
+      "WebFetch(domain:helm.sh)"
+    ],
+    "deny": [
+      "Bash(docker system prune -a --force)",
+      "Bash(kubectl delete namespace:*)"
+    ]
+  }
+}
