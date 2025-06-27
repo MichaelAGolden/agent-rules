@@ -1,8 +1,20 @@
 # Agent Rules
 
-A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor.
+A collection of reusable rules and knowledge documents for AI coding assistants like Claude Code and Cursor. This repository serves as the foundation for the `claude-config` tool, enabling seamless configuration and rule management across AI assistant environments.
 
 ## Repository Structure
+
+### 📁 commands/
+Slash commands for enhanced AI assistant capabilities:
+
+**Code Analysis & Quality**
+- **[analyze-complexity.md](./commands/analyze-complexity.md)** (`/ac`) - Analyzes code complexity with real tools and AI insights
+- **[dead-code-review.md](./commands/dead-code-review.md)** (`/dcr`) - Identifies dead code, unused imports, and unreachable logic
+- **[find-duplicates.md](./commands/find-duplicates.md)** (`/fd`) - Detects duplicated code patterns for refactoring
+
+**Documentation**
+- **[document-code.md](./commands/document-code.md)** (`/doc`) - Adds comprehensive documentation optimized for humans and AI
+- **[doc-sync.md](./commands/doc-sync.md)** (`/ds`) - Analyzes code changes and proposes documentation updates
 
 ### 📁 project-rules/
 Actionable rules for AI assistants to follow during development:
@@ -56,6 +68,11 @@ Reference documentation and knowledge bases:
   - [mcp-best-practices.mdc](./docs/mcp-best-practices.mdc) - Best practices for building Model Context Protocol servers
   - [mcp-releasing.mdc](./docs/mcp-releasing.mdc) - Guide for releasing MCP servers as NPM packages
 
+### 📁 permissions/
+JSON permission configurations for different project types:
+- Security models with allow/deny lists for various development contexts
+- Pre-configured permission sets for common frameworks and languages
+
 ### 📁 global-rules/
 Global Claude Code configuration and automation scripts (place in `~/.claude/CLAUDE.md`):
 - **[github-issue-creation.mdc](./global-rules/github-issue-creation.mdc)** - Creating well-structured GitHub issues (Credit: [@nityeshaga](https://x.com/nityeshaga/status/1933113428379574367))
@@ -63,6 +80,40 @@ Global Claude Code configuration and automation scripts (place in `~/.claude/CLA
 - **[terminal-title-wrapper.zsh](./global-rules/terminal-title-wrapper.zsh)** - ZSH wrapper for dynamic terminal titles
 - **[mcp-sync.sh](./global-rules/mcp-sync.sh)** - Script to sync MCP servers across Claude installations
 - **[mcp-sync-rule.md](./global-rules/mcp-sync-rule.md)** - Documentation for MCP sync functionality
+
+## Claude Config Tool
+
+This repository is designed to work with the `claude-config` tool, which provides automated management of AI assistant configurations.
+
+### Installation & Setup
+
+1. **Install project rules:**
+   ```bash
+   ./install-project-rules.sh
+   ```
+   This installs project rules into `~/.claude/CLAUDE.md`
+
+2. **Interactive configuration:**
+   ```bash
+   ./tweak-claude.sh
+   ```
+   Manage MCP servers and project rules interactively
+
+3. **Verify installation:**
+   ```bash
+   cat ~/.claude/CLAUDE.md
+   ```
+   Check that rules have been properly installed
+
+### Using Commands
+
+Commands are designed as slash commands that can be invoked directly:
+
+- `/ac` - Analyze code complexity
+- `/dcr` - Review for dead code
+- `/fd` - Find duplicate code patterns
+- `/doc` - Add comprehensive documentation
+- `/ds` - Sync documentation with code changes
 
 ## Usage
 
@@ -130,13 +181,15 @@ Dynamic terminal titles for better multi-instance organization.
 ## Contributing
 
 Feel free to contribute your own rules! Please ensure they:
-1. Use the `.mdc` extension
-2. Include proper YAML frontmatter with `description`, `globs`, and `alwaysApply` fields
+1. Use the `.mdc` extension (or `.md` for commands)
+2. Include proper YAML frontmatter with `description`, `globs`, and `alwaysApply` fields (for `.mdc` files)
 3. Contain clear, actionable instructions
 4. Are generic enough to be reused across projects
 5. Are placed in the appropriate directory:
+   - `commands/` for slash commands
    - `project-rules/` for actionable AI assistant rules
    - `docs/` for reference documentation
+   - `permissions/` for security configurations
 
 ## Why This Format?
 
